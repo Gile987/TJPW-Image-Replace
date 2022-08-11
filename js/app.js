@@ -25,3 +25,20 @@ let playerImages = [
   "https://i.imgur.com/Rylvzy6.jpg",
   "https://i.imgur.com/t0G8y0Z.jpg",
 ];
+
+const images = document.getElementsByTagName("img");
+
+const shuffleArray = array => {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    const temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+  };
+};
+
+shuffleArray(playerImages);
+
+for (let i = 0; i < images.length; i++) {
+  images[i].src = playerImages[i];
+};
