@@ -1,0 +1,14 @@
+{
+  "manifest_version": 1,
+  "name": "TJPW Image Replace",
+  "version": "0.1.1",
+  "description": "Replace images in a webpage with images of TJPW players",
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["js/app.js"]
+    }
+  ]
+}
