@@ -45,6 +45,10 @@ window.onload = () => {
         images[i].src = playerImages[i];
         images[i].dataset.replaced = true;
       };
+      if (!playerImages[i]) {
+        images[i].src = playerImages[Math.floor(Math.random() * playerImages.length)];
+        images[i].dataset.replaced = true;
+      };
     };
   };
   app();
