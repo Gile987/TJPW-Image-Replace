@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "TJPW Image Replace",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Replace images in a webpage with images of TJPW players",
   "content_scripts": [
     {
