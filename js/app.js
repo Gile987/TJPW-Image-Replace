@@ -51,5 +51,18 @@ window.onload = () => {
       };
     };
   };
+
+  const countReplacedImages = () => {
+    let images = document.querySelectorAll('img');
+    let count = 0;
+    for (let i = 0; i < images.length; i++) {
+      if (images[i].dataset.replaced === "true") {
+        count++;
+      };
+    };
+    console.log("replaced images", count);
+  };
+
   app();
+  countReplacedImages();
 };
