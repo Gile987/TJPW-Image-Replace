@@ -63,6 +63,24 @@ window.onload = () => {
     console.log("replaced images", count);
   };
 
+  const checkIfAllImagesReplaced = () => {
+    let images = document.querySelectorAll('img');
+    let count = 0;
+    for (let i = 0; i < images.length; i++) {
+      if (images[i].dataset.replaced === "true") {
+        count++;
+      };
+    };
+    if (count === images.length) {
+      console.log("All images replaced");
+      return true;
+    } else {
+      console.log("Not all images replaced");
+      return false;
+    };
+  };
+
   app();
   countReplacedImages();
+
 };
