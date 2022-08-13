@@ -82,5 +82,12 @@ window.onload = () => {
 
   app();
   countReplacedImages();
-
+  setInterval(() => {
+    if (checkIfAllImagesReplaced()) {
+      countReplacedImages();
+    } else {
+      app();
+      countReplacedImages();
+    };
+  } , 1000);
 };
